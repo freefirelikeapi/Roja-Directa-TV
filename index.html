@@ -178,6 +178,24 @@
       </p>
     </section>
 
+    <!-- Ad: 728x90 leaderboard (desktop only) -->
+    <div class="ad-leaderboard">
+      <div class="ad-leaderboard-inner">
+        <script>atOptions = { 'key': 'c85d9f7413bbbdc472147e7ec2f54187', 'format': 'iframe', 'height': 90, 'width': 728, 'params': {} };</script>
+        <script src="https://marksdespitelinear.com/c85d9f7413bbbdc472147e7ec2f54187/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- Ad: side rails (wide desktop only) -->
+    <aside class="ad-rail ad-rail-left">
+      <script>atOptions = { 'key': '694a7872a58b084cda1a9c7dc7f1958d', 'format': 'iframe', 'height': 600, 'width': 160, 'params': {} };</script>
+      <script src="https://marksdespitelinear.com/694a7872a58b084cda1a9c7dc7f1958d/invoke.js"></script>
+    </aside>
+    <aside class="ad-rail ad-rail-right">
+      <script>atOptions = { 'key': '8dc5f2a1b9f68ac3c930f88f940daec1', 'format': 'iframe', 'height': 300, 'width': 160, 'params': {} };</script>
+      <script src="https://marksdespitelinear.com/8dc5f2a1b9f68ac3c930f88f940daec1/invoke.js"></script>
+    </aside>
+
     <section class="agenda-toolbar" aria-label="Herramientas de filtrado">
       <div class="toolbar-search-row">
         <div class="search-input-wrap">
@@ -403,7 +421,36 @@
       </article>
     </section>
 
+    <!-- Ad: sticky bottom banner (mobile only, hidden ≥768px by CSS) -->
+    <div id="ad-bottom-banner">
+      <div class="ad-bb-wrap">
+        <button type="button" class="ad-bb-close" aria-label="Cerrar anuncio" onclick="document.getElementById('ad-bottom-banner').remove()">✕</button>
+        <div id="ad-bb-outer">
+          <div id="ad-bb-inner">
+            <script>atOptions = { 'key': 'c85d9f7413bbbdc472147e7ec2f54187', 'format': 'iframe', 'height': 90, 'width': 728, 'params': {} };</script>
+            <script src="https://marksdespitelinear.com/c85d9f7413bbbdc472147e7ec2f54187/invoke.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
+
+  <!-- Ad: bottom banner scale-to-fit -->
+  <script>
+  (function(){
+    function f(){
+      var o=document.getElementById("ad-bb-outer"),i=document.getElementById("ad-bb-inner");
+      if(!o||!i)return;
+      var s=Math.min(1,o.clientWidth/728);
+      i.style.transform="scale("+s+")";
+      o.style.height=(90*s)+"px";
+    }
+    window.addEventListener("resize",f);
+    window.addEventListener("load",f);
+    f();setTimeout(f,800);setTimeout(f,2500);
+  })();
+  </script>
 
   <footer class="site-footer">
     <div class="container">

@@ -2229,10 +2229,18 @@ input {
   background: #b00000;
 }
 
-/* ===== Ads: side rails + mobile sticky bottom banner ===== */
+/* ===== Ads: leaderboard, side rails, mobile sticky bottom banner ===== */
+
+.ad-leaderboard { display: none; margin: 14px 0; }
+.ad-leaderboard-inner { margin: 0 auto; overflow: hidden; width: 728px; height: 90px; max-width: 100%; }
+
+@media screen and (min-width: 768px) {
+  .ad-leaderboard { display: block; }
+}
+
 .ad-rail { display: none; }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   .ad-rail {
     display: block;
     position: fixed;
